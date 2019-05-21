@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>It's Wine Time</title>
+  <link rel="icon" href="assets/wine-glass-favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <a href="#main-content" class="visually-hidden">Skip to the main content on this page.</a>
+  <header>
+    <div class="titleContent">
+      <h1><span class="title-span">wine</span><span class="title-span">time</span></h1>
+      <h2>Which type of wine should you be enjoying tonight?</h2>
+      <a href="#q-1" class="startQuiz" aria-label="Click to proceed to question 1.">Start quiz!</a>
+    </div>
+  </header>
+  <main id="main-content">
+    <form action="" class="quiz">
+      <!-- QUESTION 1 - CHOCOLATE TYPE -->
+      <fieldset class="chocolate-type" id="q-1">
+        <div class="question wrapper">
+          <p>So you've got a sweet tooth. Which type of chocolate do you prefer?</p>
+          <ul>
+            <!-- Option 1 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/dark-chocolate.jpg" alt="Shaved dark chocolate.">
+              </div>
+              <label for="dark-chocolate">Dark Chocolate</label>
+              <input type="radio" name="chocolate" id="dark-chocolate" value="1" required>
+            </li>
+            <!-- Option 2 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/milk-chocolate.jpg" alt="Milk Chocolate Truffles.">
+              </div>
+              <label for="milk-chocolate">Milk Chocolate</label>
+              <input type="radio" name="chocolate" id="milk-chocolate" value="2" required>
+            </li>
+            <!-- Option 3 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/white-chocolate.jpg" alt="A stack of white chocolate bars with almonds laying in front on the counter.">
+              </div>
+              <label for="white-chocolate">White Chocolate</label>
+              <input type="radio" name="chocolate" id="white-chocolate" value="3" required>
+            </li>
+          </ul>
+          <a href="#q-2" aria-label="Click to proceed to question 2.">Next Question</a>
+        </div>
+      </fieldset>
+      <!-- QUESTION 2 - DINNER TYPE -->
+      <fieldset class="dinner-type" id="q-2">
+        <div class="question wrapper">
+          <p>Hunger gets the best of us. What are you dying to eat tonight?</p>
+          <ul>
+            <!-- Option 1 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/meat.jpg" alt="A bunch of smoked ribs on a cutting board.">
+              </div>
+              <label for="meat">Red Meat</label>
+              <input type="radio" name="dinner" id="meat" value="1" required>
+            </li>
+            <!-- Option 2 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/poultry.jpg" alt="An oven roasted whole chicken in a pan.">
+              </div>
+              <label for="poultry">Poultry</label>
+              <input type="radio" name="dinner" id="poultry" value="2" required>
+            </li>
+            <!-- Option 3 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/vegetables.jpg" alt="A tray of roasted vegetables.">
+              </div>
+              <label for="vegetables">Vegetables</label>
+              <input type="radio" name="dinner" id="vegetables" value="3" required>
+            </li>
+          </ul>
+          <a href="#q-3" aria-label="Click to proceed to question 3.">Next Question</a>
+        </div>
+      </fieldset>
+      <!-- QUESTION 3 - CHEESE TYPE -->
+      <fieldset class="cheese-type" id="q-3">
+        <div class="question wrapper">
+          <p>It's okay if you want to be fancy. What's going on your cheeseboard?</p>
+          <ul>
+            <!-- Option 1 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/cheddar-cheese.jpg" alt="A wheel of smoked cheddar cheese cut in quarters.">
+              </div>
+              <label for="cheddar">Smoked Cheddar</label>
+              <input type="radio" name="cheese" id="cheddar" value="1" required>
+            </li>
+            <!-- Option 2 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/brie-cheese.jpg" alt="Stacked wheels of brie cheese.">
+              </div>
+              <label for="brie">Brie</label>
+              <input type="radio" name="cheese" id="brie" value="2" required>
+            </li>
+            <!-- Option 3 -->
+            <li>
+              <div class="optionImage">
+                <img src="assets/goat-cheese.jpg" alt="A cheese board with goat cheese and crackers.">
+              </div>
+              <label for="goat">Goat</label>
+              <input type="radio" name="cheese" id="goat" value="3" required>
+            </li>
+          </ul>
+          <button id="form-submit" aria-label="Click to retrieve results.">See Results!</button>
+        </div>
+      </fieldset>
+      
+      <section class="results" id="final">
+      <!-- Results section for dynamically placed content -->
+      </section>
+    </form>
+  </main>
+  <footer>
+    <p>©2019 Christina Greene</p>
+  </footer>
+
+
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>

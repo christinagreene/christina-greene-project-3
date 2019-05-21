@@ -1,0 +1,271 @@
+@import 'partials/setup';
+@import 'partials/variables';
+
+//Base Styles/////////
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2.2rem;
+  font-family: $bodyFont;
+  color: $primaryFontColor;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+// Common Styles
+a,
+button {
+  font-family: $titleFont;
+  font-weight: 700;
+  font-size: 2.0rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $secondaryFontColor;
+  padding: 10px 20px;
+  background: $purpleAccentColor;
+  border-radius: 5px;
+  transition: background .3s ease-in-out;
+  &:hover {
+    background: $greenAccentColor;
+    border: 1px solid $purpleAccentColor;
+  }
+  &:active {
+    background: $primaryFontColor;
+    color: $purpleAccentColor;
+  }
+  &:focus {
+    border: 2px dotted $purpleAccentColor;
+  }
+  &:visited {
+    border: 1px solid $secondaryFontColor;
+  }
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  .question {
+    padding: 10px 0 30px 0;
+  }
+  p {
+    font-family: $titleFont;
+    font-size: 3rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 30px;
+    li {
+      width: calc(33.33% - 13px);
+      margin-left: 20px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  label {
+    padding: 15px 0;
+  }
+}
+
+.chocolate-type,
+.cheese-type {
+  background: $whiteColor;
+}
+
+.chocolate-type,
+.dinner-type {
+  img {
+    max-height: 370px;
+  }
+}
+
+.dinner-type,
+footer {
+  background: $greenAccentColor;
+}
+
+
+// Header Styles
+header {
+  background: url('../assets/corks.jpg') no-repeat center center/cover;
+  overflow: hidden;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  .titleContent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6);
+    font-family: $titleFont;
+    color: $secondaryFontColor;
+
+  }
+  h1 {
+    font-weight: 700;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 16rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 50px 0 30px 0;
+    .title-span {
+    display: block;
+    }
+  }
+  h2 {
+    font-size: 3rem;
+    margin: 0 0 40px 0;
+  }
+}
+
+// Submit for Results Button
+button {
+  border: 1px solid $purpleAccentColor;
+}
+
+// Footer
+footer {
+  p {
+    margin: 0;
+    padding: 10px 0;
+  }
+}
+
+
+// Results section added by JS (general styles) ///////
+.results {
+  position: relative;
+  .red-result,
+  .white-result {
+    height: 90vh;
+    overflow: hidden;
+  }
+  .results-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5)
+  }
+  .results-heading {
+    width: 50%;
+    margin-left: 10%;
+    padding-top: 22vh;
+    
+    h3 {
+      font-family: $titleFont;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 5rem;
+    }
+  }
+}
+
+// Red & Rosé Wine Results
+.red-result {
+  background: url('../assets/red-wine-background.jpg') no-repeat center center/cover;
+}
+
+// White Wine Results
+.white-result {
+  background: url('../assets/white-wine-background.jpg') no-repeat center center/cover;
+}
+
+// Responsive Styles ///////////
+
+//portrait tablet and small desktops
+@media (max-width: 940px) {
+  fieldset {
+    padding: 0 20px;
+    .question {
+      padding: 2% 0 5% 0;
+    }
+  }
+  .chocolate-type,
+  .dinner-type {
+    img {
+    max-height: 300px;
+    }
+  }
+}
+
+// landscape phone to portrait tablet
+@media (max-width: 768px) {
+  .chocolate-type,
+  .dinner-type {
+    img {
+    max-height: 220px;
+    }
+  }
+  .results {
+    .results-heading {
+      width: 96%;
+      margin: 0 2%;  
+      padding: 10% 5% 5% 5%;
+    }
+    .white-result,
+    .red-result {
+      height: 70vh;
+    }
+  }
+}
+
+// landscape phones and down (smallest screen width 320px)
+@media (max-width: 480px) {
+  header {
+    height: 90vh;
+    h1 {
+      font-size: 12rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+  fieldset {
+    .question {
+      padding-bottom: 10%;
+    }
+    ul {
+      flex-direction: column;
+      li {
+        width: 100%;
+        margin: 0;
+      }
+      .optionImage {
+        margin-top: 20px;
+      }
+    }
+    p {
+      font-size: 2.4rem;
+    }
+  }
+  .results {
+    .results-heading {
+      padding: 5%;
+    }
+  }
+}
