@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>It's Wine Time</title>
+  <title>Wine Time</title>
   <link rel="icon" href="assets/wine-glass-favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i|Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
@@ -12,10 +12,10 @@
 <body>
   <a href="#main-content" class="visually-hidden">Skip to the main content on this page.</a>
   <header>
-    <div class="titleContent">
+    <div class="title-content">
       <h1><span class="title-span">wine</span><span class="title-span">time</span></h1>
       <h2>Which type of wine should you be enjoying tonight?</h2>
-      <a href="#q-1" class="startQuiz" aria-label="Click to proceed to question 1.">Start quiz!</a>
+      <a href="#q-1" aria-label="Click to proceed to question 1.">Start quiz!</a>
     </div>
   </header>
   <main id="main-content">
@@ -27,7 +27,7 @@
           <ul>
             <!-- Option 1 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/dark-chocolate.jpg" alt="Shaved dark chocolate.">
               </div>
               <label for="dark-chocolate">Dark Chocolate</label>
@@ -35,7 +35,7 @@
             </li>
             <!-- Option 2 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/milk-chocolate.jpg" alt="Milk Chocolate Truffles.">
               </div>
               <label for="milk-chocolate">Milk Chocolate</label>
@@ -43,14 +43,14 @@
             </li>
             <!-- Option 3 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/white-chocolate.jpg" alt="A stack of white chocolate bars with almonds laying in front on the counter.">
               </div>
               <label for="white-chocolate">White Chocolate</label>
               <input type="radio" name="chocolate" id="white-chocolate" value="3" required>
             </li>
           </ul>
-          <a href="#q-2" aria-label="Click to proceed to question 2.">Next Question</a>
+          <a href="#q-2" class="next-question-button" aria-label="Click to proceed to question 2.">Next Question</a>
         </div>
       </fieldset>
       <!-- QUESTION 2 - DINNER TYPE -->
@@ -60,7 +60,7 @@
           <ul>
             <!-- Option 1 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/meat.jpg" alt="A bunch of smoked ribs on a cutting board.">
               </div>
               <label for="meat">Red Meat</label>
@@ -68,7 +68,7 @@
             </li>
             <!-- Option 2 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/poultry.jpg" alt="An oven roasted whole chicken in a pan.">
               </div>
               <label for="poultry">Poultry</label>
@@ -76,14 +76,14 @@
             </li>
             <!-- Option 3 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/vegetables.jpg" alt="A tray of roasted vegetables.">
               </div>
               <label for="vegetables">Vegetables</label>
               <input type="radio" name="dinner" id="vegetables" value="3" required>
             </li>
           </ul>
-          <a href="#q-3" aria-label="Click to proceed to question 3.">Next Question</a>
+          <a href="#q-3" class="next-question-button" aria-label="Click to proceed to question 3.">Next Question</a>
         </div>
       </fieldset>
       <!-- QUESTION 3 - CHEESE TYPE -->
@@ -93,7 +93,7 @@
           <ul>
             <!-- Option 1 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/cheddar-cheese.jpg" alt="A wheel of smoked cheddar cheese cut in quarters.">
               </div>
               <label for="cheddar">Smoked Cheddar</label>
@@ -101,7 +101,7 @@
             </li>
             <!-- Option 2 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/brie-cheese.jpg" alt="Stacked wheels of brie cheese.">
               </div>
               <label for="brie">Brie</label>
@@ -109,7 +109,7 @@
             </li>
             <!-- Option 3 -->
             <li>
-              <div class="optionImage">
+              <div class="option-image">
                 <img src="assets/goat-cheese.jpg" alt="A cheese board with goat cheese and crackers.">
               </div>
               <label for="goat">Goat</label>
@@ -126,7 +126,7 @@
     </form>
   </main>
   <footer>
-    <p>©2019 Christina Greene</p>
+    <p>Created by Christina Greene</p>
   </footer>
 
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>

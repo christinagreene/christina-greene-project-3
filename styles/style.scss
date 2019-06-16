@@ -112,7 +112,7 @@ header {
   height: 100vh;
   text-align: center;
   position: relative;
-  .titleContent {
+  .title-content {
     position: absolute;
     top: 0;
     right: 0;
@@ -121,7 +121,6 @@ header {
     background: rgba(255, 255, 255, 0.6);
     font-family: $titleFont;
     color: $secondaryFontColor;
-
   }
   h1 {
     font-weight: 700;
@@ -168,18 +167,23 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.5)
+    background: rgba(255, 255, 255, 0.7)
   }
   .results-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 50%;
+    min-height: 85vh;
     margin-left: 10%;
-    padding-top: 22vh;
     
     h3 {
       font-family: $titleFont;
       font-weight: 700;
       font-style: italic;
       font-size: 5rem;
+      margin: 0;
     }
   }
 }
@@ -222,13 +226,10 @@ footer {
   }
   .results {
     .results-heading {
+      height: auto;
       width: 96%;
       margin: 0 2%;  
       padding: 10% 5% 5% 5%;
-    }
-    .white-result,
-    .red-result {
-      height: 70vh;
     }
   }
 }
@@ -247,6 +248,9 @@ footer {
   fieldset {
     .question {
       padding-bottom: 10%;
+      .next-question-button {
+        display: none;
+      }
     }
     ul {
       flex-direction: column;
@@ -254,7 +258,7 @@ footer {
         width: 100%;
         margin: 0;
       }
-      .optionImage {
+      .option-image {
         margin-top: 20px;
       }
     }
@@ -265,6 +269,14 @@ footer {
   .results {
     .results-heading {
       padding: 5%;
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .results {
+    .results-heading h3 {
+      font-size: 3.5rem;
     }
   }
 }
